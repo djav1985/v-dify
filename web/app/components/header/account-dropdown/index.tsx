@@ -86,53 +86,10 @@ export default function AppSelector({ isMobile }: IAppSelecotr) {
                     shadow-lg
                   "
                 >
-                  <Menu.Item>
-                    <div className='flex flex-nowrap items-center px-4 py-[13px]'>
-                      <Avatar name={userProfile.name} size={36} className='mr-3' />
-                      <div className='grow'>
-                        <div className='leading-5 font-normal text-[14px] text-gray-800 break-all'>{userProfile.name}</div>
-                        <div className='leading-[18px] text-xs font-normal text-gray-500 break-all'>{userProfile.email}</div>
-                      </div>
-                    </div>
-                  </Menu.Item>
-                  <div className='px-1 py-1'>
-                    <div className='mt-2 px-3 text-xs font-medium text-gray-500'>{t('common.userProfile.workspace')}</div>
-                    <WorkplaceSelector />
-                  </div>
-                  <div className="px-1 py-1">
                     <Menu.Item>
                       <div className={itemClassName} onClick={() => setShowAccountSettingModal({ payload: 'account' })}>
                         <div>{t('common.userProfile.settings')}</div>
                       </div>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <Link
-                        className={classNames(itemClassName, 'group justify-between')}
-                        href='https://github.com/langgenius/dify/discussions/categories/feedbacks'
-                        target='_blank' rel='noopener noreferrer'>
-                        <div>{t('common.userProfile.roadmapAndFeedback')}</div>
-                        <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
-                      </Link>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <Link
-                        className={classNames(itemClassName, 'group justify-between')}
-                        href='https://discord.gg/5AEfbxcd9k'
-                        target='_blank' rel='noopener noreferrer'>
-                        <div>{t('common.userProfile.community')}</div>
-                        <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
-                      </Link>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <Link
-                        className={classNames(itemClassName, 'group justify-between')}
-                        href={
-                          locale !== LanguagesSupported[1] ? 'https://docs.dify.ai/' : `https://docs.dify.ai/v/${locale.toLowerCase()}/`
-                        }
-                        target='_blank' rel='noopener noreferrer'>
-                        <div>{t('common.userProfile.helpCenter')}</div>
-                        <ArrowUpRight className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' />
-                      </Link>
                     </Menu.Item>
                     {
                       document?.body?.getAttribute('data-public-site-about') !== 'hide' && (
