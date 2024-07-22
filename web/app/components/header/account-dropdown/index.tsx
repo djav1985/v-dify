@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next'
 import { Fragment, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useContext } from 'use-context-selector'
+import classNames from 'classnames'
 import { RiArrowDownSLine } from '@remixicon/react'
 import Link from 'next/link'
 import { Menu, Transition } from '@headlessui/react'
 import Indicator from '../indicator'
 import AccountAbout from '../account-about'
 import WorkplaceSelector from './workplace-selector'
-import classNames from '@/utils/classnames'
 import I18n from '@/context/i18n'
 import Avatar from '@/app/components/base/avatar'
 import { logout } from '@/service/common'
@@ -86,6 +86,16 @@ export default function AppSelector({ isMobile }: IAppSelecotr) {
                     shadow-lg
                   "
                 >
+                  <Menu.Item>
+                    <div className='flex flex-nowrap items-center px-4 py-[13px]'>
+                      <Avatar name={userProfile.name} size={36} className='mr-3' />
+                      <div className='grow'>
+                        <div className='leading-5 font-normal text-[14px] text-gray-800 break-all'>{userProfile.name}</div>
+                        <div className='leading-[18px] text-xs font-normal text-gray-500 break-all'>{userProfile.email}</div>
+                      </div>
+                    </div>
+                  </Menu.Item>
+                  <div className="px-1 py-1">
                     <Menu.Item>
                       <div className={itemClassName} onClick={() => setShowAccountSettingModal({ payload: 'account' })}>
                         <div>{t('common.userProfile.settings')}</div>
