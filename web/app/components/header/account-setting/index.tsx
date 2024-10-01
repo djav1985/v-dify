@@ -220,7 +220,6 @@ export default function AccountSetting({
             {activeMenu === 'account' && <AccountPage />}
             {activeMenu === 'members' && <MembersPage />}
             {activeMenu === 'billing' && <BillingPage />}
-            {activeMenu === 'integrations' && <IntegrationsPage />}
             {activeMenu === 'language' && <LanguagePage />}
             {activeMenu === 'provider' && <ModelProviderPage />}
             {activeMenu === 'data-source' && <DataSourcePage />}
