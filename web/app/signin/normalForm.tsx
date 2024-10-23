@@ -151,23 +151,15 @@ const NormalForm = () => {
             <Link
               className='system-xs-medium text-text-secondary hover:underline'
               target='_blank' rel='noopener noreferrer'
-              href='https://dify.ai/terms'
+              href='https://vontainment.com/terms-of-use/'
             >{t('login.tos')}</Link>
             &nbsp;&&nbsp;
             <Link
               className='system-xs-medium text-text-secondary hover:underline'
               target='_blank' rel='noopener noreferrer'
-              href='https://dify.ai/privacy'
+              href='https://vontainment.com/privacy-policy/'
             >{t('login.pp')}</Link>
           </div>
-          {IS_CE_EDITION && <div className="w-hull block mt-2 system-xs-regular text-text-tertiary">
-            {t('login.goToInit')}
-            &nbsp;
-            <Link
-              className='system-xs-medium text-text-secondary hover:underline'
-              href='/install'
-            >{t('login.setAdminAccount')}</Link>
-          </div>}
 
         </div>
       </div>
